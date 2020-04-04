@@ -141,6 +141,7 @@ const keyboard = {
       "?",
       "spacebar",
     ];
+
     //create HTML for an icon
     const createIconHTML = (icon_name) => {
       return `<i class="material-icons">${icon_name}}</i>`;
@@ -153,6 +154,18 @@ const keyboard = {
       //add atributes/classes
       keyElement.setAttribute("type", "button");
       keyElement.classList.add("keyboard__key");
+
+      document.onkeypress = function (event) {
+        console.log(event.keyCode);
+        console.log(event.code);
+        keyElement.classList.add("active");
+        // for (var i = 0; i <= keyLayout.length; i++) {
+        //   console.log("Продолжаем!");
+
+        //       var keyElementColor = keyLayout[i];
+        //        keyElementColor.classList.add("active");
+        // }
+      };
 
       switch (key) {
         case "backspace":
@@ -246,19 +259,6 @@ const keyboard = {
   open(initialValue, oninput, oneclose) {},
   close() {},
 };
-
-// document.onkeypress = function (event) {
-//   console.log(event.code);
-//   console.log(event.keyCode);
-//   document
-//     .querySelectorAll(".keyboard .keyboard__keys")
-//     .forEach(function (element) {
-//       element.classList.remove("keyboard__key--dark");
-//     });
-//   document
-//     .querySelector(".keyboard .keyboard__keys" + event.keyCode + "")
-//     .classList.add("keyboard__key--dark");
-// };
 
 window.addEventListener("DOMContentLoaded", function () {
   keyboard.init();
