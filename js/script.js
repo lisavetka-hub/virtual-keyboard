@@ -156,15 +156,16 @@ const keyboard = {
       keyElement.classList.add("keyboard__key");
 
       document.onkeypress = function (event) {
-        console.log(event.keyCode);
-        console.log(event.code);
-        keyElement.classList.add("active");
-        // for (var i = 0; i <= keyLayout.length; i++) {
-        //   console.log("Продолжаем!");
+        console.log(event.keyCode); //102
+        console.log(event.code); //keyF
+        console.log(event.key); //F
 
-        //       var keyElementColor = keyLayout[i];
-        //        keyElementColor.classList.add("active");
-        // }
+        for (var i = 0; i < keyLayout.length; i++) {
+          if (event.key == keyLayout[i]) {
+            console.log("Продолжаем!");
+            keyElement.classList.add("active");
+          }
+        }
       };
 
       switch (key) {
