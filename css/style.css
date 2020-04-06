@@ -1,45 +1,14 @@
-/*#keyboard {
-  width: 60%;
-  height: 200px;
-  display: block;
-  border: 1px black solid;
-  padding: 5px;
-}
-.k-key {
-  width: 50px;
-  height: 50px;
-  border: 1px black solid;
-  padding: 3px;
-  margin: 3px;
-  float: left;
-  text-align: center;
-}
-.clearfix {
-  display: block;
-  width: 100%;
-  clear: both;
-}
-.active {
-  background: orange;
-  border-radius: 60px;
-}*/
 .keyboard {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
-  padding: 5px 0;
+  width: 80%;
+  padding: 11px 0;
   background: #8a8d8c;
-  box-shadow: 0 0 50px rgba(53, 52, 52, 0.5);
-  user-select: none;
   transition: bottom 0.4s;
   border-radius: 35px;
 }
 
-/*.keyboard--hidden {
-  bottom: -100%;
-}
-*/
 .keyboard__keys {
   text-align: center;
 }
@@ -50,18 +19,13 @@
   max-width: 90px;
   margin: 3px;
   border-radius: 30px;
-  border: none;
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
-  font-size: 1.05rem;
   outline: none;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  vertical-align: top;
-  padding: 0;
-  /*-webkit-tap-highlight-color: transparent;*/
   position: relative;
 }
 
